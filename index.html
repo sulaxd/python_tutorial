@@ -1,1 +1,58 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('myCss'); ?>
+  </head>
+<body>
+
+<form id="contact" action="" method="post">
+    <h3>上傳系統</h3>
+    <h4>打卡活動</h4>
+
+<!-- Text input fields -->
+<input placeholder="姓名" name="myName" type="text" tabindex="1" required="" autofocus="">
+<input placeholder="電話" name="myTel" type="text" tabindex="2" required="">
+<input placeholder="地址" name="myAddr" type="text" tabindex="3" required="">
+<!-- File upload button -->
+<input id="file" type="file">
+<!-- Form submit button -->
+<button id="btn" type="btn" onclick="submitForm(); return false;">Submit</button>
+
+  
+</form>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+  var file, 
+      reader = new FileReader();
+
+  // Upload the file to Google Drive
+  reader.onloadend = function(e) {
+    google.script.run
+      .withSuccessHandler(showMessage)
+      .uploadFileToGoogleDrive(
+         e.target.result, file.name, 
+         $('input#myName').val(), 
+         $('input#myTel').val(),
+         $('input#myAddr').val()
+      );
+  };
+
+  // Read the file on form submit
+  function submitForm() {
+    file = $('#file')[0].files[0];
+    showMessage("檔案上傳中……");
+//    this.value='檔案上傳中……';
+    reader.readAsDataURL(file);
+  }
+
+  function showMessage(e) {
+    $('#btn').html(e);
+  }
+  window.stop()
+
+</script>
+</body>
+</html>
+
+
