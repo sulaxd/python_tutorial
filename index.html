@@ -216,7 +216,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">練習題</h1>
 <h4 class="author"><em>湯明軒 Andrew (<a href="mailto:tang@thinkerdata.com">tang@thinkerdata.com</a>) at 析客數據有限公司</em></h4>
-<h4 class="date"><em>2017/10/01</em></h4>
+<h4 class="date"><em>2017/10/25</em></h4>
 
 </div>
 
@@ -236,13 +236,100 @@ div.tocify {
 <pre><code>## 6</code></pre>
 </div>
 </div>
+<div id="1" class="section level2 tabset tabset-fade">
+<h2>10/26練習1</h2>
+<div id="q1" class="section level3">
+<h3>Q1</h3>
+<p>請問<span class="math inline">\(\frac{\pi}{2}\)</span>是多少？</p>
+</div>
+<div id="a1" class="section level3">
+<h3>A1</h3>
+<pre class="python"><code>import math
+print(math.pi/2)</code></pre>
+<pre><code>## 1.5707963267948966</code></pre>
+</div>
+<div id="q2" class="section level3">
+<h3>Q2</h3>
+<p>請計算三角函數的<span class="math inline">\(sin(\frac{\pi}{2})\)</span></p>
+</div>
+<div id="a2" class="section level3">
+<h3>A2</h3>
+<pre class="python"><code>import math
+print(math.sin(math.pi/2))</code></pre>
+<pre><code>## 1.0</code></pre>
+</div>
+<div id="q3" class="section level3">
+<h3>Q3</h3>
+<p>試撰寫一程式，計算五邊形面積的公式如下：</p>
+<p><span class="math inline">\(\frac{5 * s^2}{4 * tan(\frac{pi}{5})}\)</span></p>
+<p>請問邊長為9的五邊形面積？</p>
+</div>
+<div id="a3" class="section level3">
+<h3>A3</h3>
+<pre class="python"><code>import math
+
+s = 9
+
+area = (5 * math.pow(s, 2)) / (4 * math.tan(math.pi / 5))
+
+print(&quot;Area =&quot;, area)</code></pre>
+<pre><code>## Area = 139.35866944770632</code></pre>
+</div>
+<div id="final" class="section level3">
+<h3>Final</h3>
+<p>完成後，請將程式透過input()改為使用者可互動的模式</p>
+</div>
+</div>
+<div id="2" class="section level2 tabset tabset-fade">
+<h2>10/26練習2</h2>
+<div id="q-1" class="section level3">
+<h3>Q</h3>
+<p>請撰寫一程式，根據使用者輸入的分數顯示對應的等級。 標準如下：</p>
+<ul>
+<li>80~100分：A</li>
+<li>70~79 分：B</li>
+<li>60~69 分：C</li>
+<li>小於等於59 分：F</li>
+</ul>
+</div>
+<div id="a-1" class="section level3">
+<h3>A</h3>
+<pre class="python"><code>score = 90
+
+if score &lt;= 59:
+    print(&quot;F&quot;)
+elif score &lt;= 69:
+    print(&quot;C&quot;)
+elif score &lt;= 79:
+    print(&quot;B&quot;)
+else:
+    print(&quot;A&quot;)</code></pre>
+<pre><code>## A</code></pre>
+</div>
+</div>
+<div id="3" class="section level2 tabset tabset-fade">
+<h2>10/26練習3</h2>
+<div id="a-2" class="section level3">
+<h3>A</h3>
+<p>累計1到100之和</p>
+</div>
+<div id="q-2" class="section level3">
+<h3>Q</h3>
+<pre class="python"><code>result = 0
+for i in range(1, 100):
+    result += i
+
+print(result)</code></pre>
+<pre><code>## 4950</code></pre>
+</div>
+</div>
 <div id="for" class="section level2 tabset tabset-fade">
 <h2>for迴圈</h2>
-<div id="q-1" class="section level3">
+<div id="q-3" class="section level3">
 <h3>Q</h3>
 <p>試著使用for loop及range，print整數1:5</p>
 </div>
-<div id="a-1" class="section level3">
+<div id="a-3" class="section level3">
 <h3>A</h3>
 <pre class="python"><code>for i in range(1,5+1):
   print(i)</code></pre>
@@ -255,11 +342,11 @@ div.tocify {
 </div>
 <div class="section level2 tabset tabset-fade">
 <h2>自定義函數</h2>
-<div id="q-2" class="section level3">
+<div id="q-4" class="section level3">
 <h3>Q</h3>
 <p>請自定義一個函數：判別input為奇數或是偶數</p>
 </div>
-<div id="a-2" class="section level3">
+<div id="a-4" class="section level3">
 <h3>A</h3>
 <pre class="python"><code>def oddOrEven(num):
     mod = int(num) % 2
@@ -270,497 +357,206 @@ div.tocify {
         
 oddOrEven(9)</code></pre>
 <pre><code>## You picked an odd number.</code></pre>
-</div>
-</div>
-<div id="googleget" class="section level2 tabset tabset-fade">
-<h2>Google評論GET</h2>
-<div id="q-3" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>GET 「Google Play商店的APP評論」</li>
-<li>請依下列步驟練習：
-<ul>
-<li>打開Chrome瀏覽器，於網址列中輸入Google Play並進入其網站</li>
-<li>於Google Play中搜尋「Whos call」並進入其App內頁</li>
-<li>依照上述步驟將網頁GET下來</li>
-</ul></li>
-</ul>
-</div>
-<div id="a-3" class="section level3">
-<h3>A</h3>
-<pre class="python"><code>import requests
-res_gooplay_get = requests.get('https://play.google.com/store/apps/details?id=gogolook.callgogolook2&amp;hl=zh_TW')
-print(type(res_gooplay_get))
-print(dir(res_gooplay_get))
-print(res_gooplay_get.text[:100])</code></pre>
-<pre><code>## &lt;class 'requests.models.Response'&gt;
-## ['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'iter_content', 'iter_lines', 'json', 'links', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
-## &lt;!doctype html&gt;
-## &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:og=&quot;http://ogp.me/ns#&quot; lang=&quot;zh_TW&quot;</code></pre>
-</div>
-</div>
-<div id="post" class="section level2 tabset tabset-fade">
-<h2>POST簡易網站</h2>
-<div id="q-4" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>請依下列步驟練習：
-<ul>
-<li><a href="https://www.cs.tut.fi/~jkorpela/forms/testing.html" class="uri">https://www.cs.tut.fi/~jkorpela/forms/testing.html</a></li>
-<li>請見網頁中最下方的範例</li>
-<li>依照上述步驟找出規則</li>
-<li>用POST方法，傳送表單(‘Comments’ : ‘I love Python’, ‘hidden field’:‘R is nice also’)</li>
-<li>print出server端回傳的response，並且透過HTML函數將其內容重現</li>
-</ul></li>
-</ul>
-</div>
-<div id="a-4" class="section level3">
-<h3>A</h3>
-<pre class="python"><code>import requests
-payload = {
-    'Comments':'I love Python',
-    'hidden field':'R is nice also'
-}
-
-res_simple_post2 = requests.post('http://www.tipjar.com/cgi-bin/test', data = payload)
-print(res_simple_post2.text)</code></pre>
-<pre><code>## 
-## &lt;html&gt;
-## &lt;title&gt;
-## Test result from 
-## &lt;/title&gt;
-## &lt;body bgcolor=AAFFAA&gt;
-## 
-## tipjar test script version 1.2 &lt;p&gt;
-## REMOTE_HOST translates to 
-## 0.0.0.0.unregistered
-## &lt;p&gt;
-## 
-## this is the environment:
-## 
-## &lt;p&gt;
-## 
-## SCRIPT_NAME is /cgi-bin/test &lt;br&gt;
-##  SERVER_NAME is www.tipjar.com &lt;br&gt;
-##  SERVER_ADMIN is catnip-admin@davidnicol.com &lt;br&gt;
-##  HTTP_ACCEPT_ENCODING is gzip, deflate, compress &lt;br&gt;
-##  REQUEST_METHOD is POST &lt;br&gt;
-##  CONTENT_LENGTH is 50 &lt;br&gt;
-##  HTTP_ACCEPT is */* &lt;br&gt;
-##  SCRIPT_FILENAME is /vhosts/www.tipjar.com/cgi-bin/test &lt;br&gt;
-##  SERVER_SOFTWARE is Apache/2.2.11 (Unix) &lt;br&gt;
-##  QUERY_STRING is  &lt;br&gt;
-##  REMOTE_PORT is 60941 &lt;br&gt;
-##  HTTP_USER_AGENT is python-requests/2.2.1 CPython/3.6.1 Darwin/16.7.0 &lt;br&gt;
-##  SERVER_PORT is 80 &lt;br&gt;
-##  SERVER_SIGNATURE is  &lt;br&gt;
-##  REMOTE_ADDR is 49.158.23.168 &lt;br&gt;
-##  CONTENT_TYPE is application/x-www-form-urlencoded &lt;br&gt;
-##  SERVER_PROTOCOL is HTTP/1.1 &lt;br&gt;
-##  PATH is protected by TipJar.com security &lt;br&gt;
-##  REQUEST_URI is /cgi-bin/test &lt;br&gt;
-##  GATEWAY_INTERFACE is CGI/1.1 &lt;br&gt;
-##  SERVER_ADDR is 64.62.228.52 &lt;br&gt;
-##  DOCUMENT_ROOT is protected by TipJar.com security &lt;br&gt;
-##  HTTP_HOST is www.tipjar.com &lt;br&gt;
-##  UNIQUE_ID is WYBGMkA@5DQAAFmQBJAAAAAI &lt;br&gt;
-## 
-## &lt;p&gt;
-## this is the cookie list:
-## &lt;p&gt;
-## 
-## &lt;p&gt;
-## this is the standard input:
-## &lt;p&gt;
-## Comments=I+love+Python&amp;amp;hidden+field=R+is+nice+also
-## &lt;p&gt;
-## These are the cgi data:
-## 
-## &lt;table border=1&gt;&lt;tr&gt;&lt;th&gt;KEY&lt;/th&gt;&lt;th&gt;VAL&lt;/th&gt;&lt;th&gt;DEPAQUED&lt;/th&gt;&lt;/tr&gt;
-## &lt;tr&gt;&lt;td&gt;Comments&lt;/td&gt;&lt;td&gt;I+love+Python&lt;/td&gt;&lt;td&gt;I love Python&lt;/td&gt;&lt;/tr&gt;
-## &lt;tr&gt;&lt;td&gt;hidden+field&lt;/td&gt;&lt;td&gt;R+is+nice+also&lt;/td&gt;&lt;td&gt;R is nice also&lt;/td&gt;&lt;/tr&gt;
-## &lt;/table&gt;
-## 
-## &lt;hr&gt;
-## &lt;hr&gt;
-## &lt;i&gt;Advertisements:&lt;/i&gt;
-## &lt;center&gt;
-## 
-## &lt;a href=&quot;http://www.pay2send.com/&quot;&gt;
-## &lt;img src=&quot;http://www.tipjar.com/images/pay2send.png&quot; width=468 height=60 border=0 alt=&quot;There is light at the end of the tunnel of spam: pay2send.com, where you and only you say what you have opted into.&quot;&gt;&lt;br&gt;
-## pay2send.com, where you and only you say what you have opted into
-## &lt;/a&gt;
-## &lt;br&gt;
-## &lt;!-- AMAZON credit card link --&gt;
-## &lt;hr&gt;
-## &lt;a href=&quot;http://www.amazon.com/exec/obidos/redirect?tag=tipjartransactio&amp;creative=92489&amp;camp=8117&amp;link_code=dl1&amp;path=subst/misc/amazon-cobrand-cc/v3/marketing-from-associates-step1.html/ref%3Db1_assoc_26&quot; &gt;&lt;img src=&quot;http://rcm-images.amazon.com/images/G/01/associates/promotions/b1c-468x60.gif&quot; width=&quot;468&quot; height=&quot;60&quot; border=&quot;0&quot; alt=&quot;Amazon.com Platinum Visa Card&quot;&gt;
-## &lt;br&gt;
-## &lt;hr&gt;
-## &lt;!-- incomepad referral link
-## &lt;a href=&quot;http://www.incomepad.com/index.php?refid=500241&quot;&gt;&lt;img alt=&quot;incomepad multi-level club&quot; src=http://www.incomepad.com/img/bnr1.gif&gt;&lt;/a&gt;
-## &lt;hr&gt;
-## &lt;a href=&quot;/nettoys.html&quot;&gt;
-## &lt;img 
-##  width=468 height = 60
-##  src=&quot;/images/genericbanner.gif&quot;
-## &gt; --&gt;&lt;br&gt;
-## Prototype and handle your HTML forms with TipJar Net Toys.
-## &lt;/a&gt;
-## &lt;/center&gt;
-## &lt;hr&gt;
-## 
-## &lt;hr&gt;
-## &lt;a href=http://www.tipjar.com/nettoys.html&gt; Other net toys &lt;/a&gt;
-## &lt;p&gt;
-## anything else that needs to be in a good test page? &lt;a href=mailto:webmaster@tipjar.com&gt; e-mail me &lt;/a&gt;
-## &lt;/body&gt;&lt;/html&gt;</code></pre>
-</div>
-</div>
-<div id="get-google-play-comment" class="section level2 tabset tabset-fade">
-<h2>GET Google Play Comment</h2>
-<div id="q-5" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>請依下列步驟練習：
-<ul>
-<li>透過GET取得Google play任一APP的網頁原始碼</li>
-<li>轉換為<code>BeautifulSoup</code>物件</li>
-<li>依照上述步驟找出規則並取得user評論的list</li>
-<li>將list依序print出來</li>
-</ul></li>
-</ul>
-</div>
-<div id="a-5" class="section level3">
-<h3>A</h3>
-<pre class="python"><code>import requests
-from bs4 import BeautifulSoup
-res_gooplay_get = requests.get('https://play.google.com/store/apps/details?id=gogolook.callgogolook2&amp;hl=zh_TW')
-soup = BeautifulSoup(res_gooplay_get.text, 'lxml')
-comments = soup.select('div[class=&quot;review-body with-review-wrapper&quot;]')
-for comment in comments[:3]: #只顯示前3筆
-    print(comment.get_text())</code></pre>
-<pre><code>##   你們說的基本設定裡面 根本沒有什麼啟用來電辨識的選項，你們真的有在看你們開發的app嗎  裡面選單很多都不實用【我只要來電辨識功能】 基本的都不能用 還用簡訊掃描 跟本 本末倒置 請協助我  完整評論  
-##   更新後多了鎖屏助手，看通知中心消息啟用試用後想要關閉被要求強迫註冊才給關，啟用前完全沒提示要關閉需要註冊才能關閉... 現在是怎樣，不想被電話騷擾才使用whoscall結果現在這APP變另一个擾人的流氓APP  完整評論  
-##   現在辨識好慢，也沒開省電模式怎麼會這麼慢，來電都響完了都還沒反應，打開App還要等好久才有來電紀錄，如果要打開才能看到辨識，那我裝這個要幹嘛....  完整評論</code></pre>
-</div>
-</div>
-<div id="mac-benchmarks-table-with-pandas" class="section level2 tabset tabset-fade">
-<h2>mac-benchmarks table with Pandas</h2>
-<div id="q-6" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>將「mac-benchmarks」網頁原始碼parse出表格資料</li>
-<li>請依下列步驟練習：
-<ul>
-<li>以GET方法將網頁 <a href="https://browser.primatelabs.com/mac-benchmarks" class="uri">https://browser.primatelabs.com/mac-benchmarks</a> 原始碼讀入</li>
-<li>依照上述步驟parse出表格資料</li>
-<li>試著只取得其機型與分數欄位</li>
-<li>以plot函數，繪製長條圖</li>
-</ul></li>
-</ul>
-</div>
-<div id="a-6" class="section level3">
-<h3>A</h3>
-<pre class="python"><code>import requests
-import pandas as pd
-res = requests.get(&quot;https://browser.primatelabs.com/mac-benchmarks&quot;)
-import sys
-dfs = pd.read_html(res.text)
-df = dfs[1][[&quot;Mac&quot;, &quot;Score&quot;]]
-print(df.head())
-df.plot(kind='bar');
-df.ix[:10].plot(kind='bar');</code></pre>
-<pre><code>##                                                  Mac  Score
-## 0  Mac Pro (Late 2013) Intel Xeon E5-2697 v2 @ 2....  24813
-## 1  Mac Pro (Late 2013) Intel Xeon E5-1680 v2 @ 3....  21863
-## 2  iMac (27-inch Retina Mid 2017) Intel Core i7-7...  18938
-## 3  Mac Pro (Mid 2012) Intel Xeon X5675 @ 3.1 GHz ...  18626
-## 4  iMac (21.5-inch Retina Mid 2017) Intel Core i7...  17944</code></pre>
-</div>
-</div>
-<div id="parse-joke-with-bs4" class="section level2 tabset tabset-fade">
-<h2>parse 批批踢JOKE版的推文 with bs4</h2>
-<div id="q-7" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>擷取並parse「批批踢JOKE版的一篇文章」</li>
-<li>請依下列步驟練習：
-<ul>
-<li>以GET方法將網頁 <a href="https://www.ptt.cc/bbs/joke/M.1464278893.A.2FE.html" class="uri">https://www.ptt.cc/bbs/joke/M.1464278893.A.2FE.html</a> 原始碼讀入</li>
-<li>依照上述步驟parse出推文內容及推文者</li>
-<li>透過for迴圈，整齊印出</li>
-</ul></li>
-</ul>
-</div>
-<div id="a-7" class="section level3">
-<h3>A</h3>
-<pre class="python"><code>import requests
-from bs4 import BeautifulSoup
-res_ppt_get = requests.get(&quot;https://www.ptt.cc/bbs/joke/M.1464278893.A.2FE.html&quot;)
-
-soup = BeautifulSoup(res_ppt_get.text, 'lxml')
-pushs = soup.select('.push')
-
-for push in pushs[:10]: #只印前10筆
-    print(push.select('span[class=&quot;f3 hl push-userid&quot;]')[0].text,
-          push.select('span[class=&quot;f3 push-content&quot;]')[0].text)</code></pre>
-<pre><code>## dddc : 還不錯
-## pttouch : 不錯
-## DinDing1129 : 船沈
-## Lueyueue : 有笑有推
-## dd830611 : 好笑
-## Aussielover : 清流
-## yk747win : OK
-## yk747win : 太監也不能傳承下去
-## ckyun22 : 魯夫也不想
-## mliton165 : 海軍也不想</code></pre>
-</div>
-</div>
-<div id="csv-1" class="section level2 tabset tabset-fade">
-<h2>政府開放資料csv-1</h2>
-<div id="q-8" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>政府開放資料：
-<ul>
-<li>資料集描述：戶數、人口數按戶別及性別</li>
-<li>主要欄位說明：統計年、區域別、村里、戶別、戶數、男性、女性</li>
-</ul></li>
-<li>步驟提示：
-<ul>
-<li>載入資料</li>
-<li>取得資料的維度狀況</li>
-<li>預覽前5筆資料</li>
-<li>計算各欄位摘要統計值</li>
-</ul></li>
-</ul>
-</div>
-<div id="a-8" class="section level3">
-<h3>A</h3>
-<pre class="python"><code>import pandas as pd
-opdat = pd.read_csv(&quot;_data/opendata105Y010.csv&quot;)
-print(&quot;-----資料欄列數-----&quot;)
-print(opdat.shape)
-print(&quot;-----各欄位資料類別-----&quot;)
-print(opdat.dtypes)
-print(&quot;-----各欄位摘要-----&quot;)
-print(opdat.describe())
-print(&quot;-----前五筆資料-----&quot;)
-print(opdat.head(5))</code></pre>
-<pre><code>## -----資料欄列數-----
-## (7852, 12)
-## -----各欄位資料類別-----
-## statistic_yyy               object
-## site_id                     object
-## village                     object
-## household_ordinary_total    object
-## household_business_total    object
-## household_single_total      object
-## household_ordinary_m        object
-## household_business_m        object
-## household_single_m          object
-## household_ordinary_f        object
-## household_business_f        object
-## household_single_f          object
-## dtype: object
-## -----各欄位摘要-----
-##        statistic_yyy site_id village household_ordinary_total  \
-## count           7852    7852    7852                     7852   
-## unique             2     371    5157                     2034   
-## top              105  新北市板橋區     中正里                      226   
-## freq            7851     126      32                       20   
-## 
-##        household_business_total household_single_total household_ordinary_m  \
-## count                      7852                   7852                 7852   
-## unique                       12                   1203                 2895   
-## top                           0                    108                  378   
-## freq                       7483                     42                   15   
-## 
-##        household_business_m household_single_m household_ordinary_f  \
-## count                  7852               7852                 7852   
-## unique                   79                691                 2949   
-## top                       0                 72                  251   
-## freq                   7545                 60                   13   
-## 
-##        household_business_f household_single_f  
-## count                  7852               7852  
-## unique                   58                750  
-## top                       0                 39  
-## freq                   7570                 91  
-## -----前五筆資料-----
-##   statistic_yyy site_id village household_ordinary_total  \
-## 0           統計年     區域別    村里名稱                 共同生活戶_戶數   
-## 1           105  新北市板橋區     留侯里                      432   
-## 2           105  新北市板橋區     流芳里                      402   
-## 3           105  新北市板橋區     赤松里                      212   
-## 4           105  新北市板橋區     黃石里                      304   
-## 
-##   household_business_total household_single_total household_ordinary_m  \
-## 0                 共同事業戶_戶數               單獨生活戶_戶數              共同生活戶_男   
-## 1                        0                    252                  664   
-## 2                        0                    236                  628   
-## 3                        0                    108                  349   
-## 4                        0                    142                  515   
-## 
-##   household_business_m household_single_m household_ordinary_f  \
-## 0              共同事業戶_男            單獨生活戶_男              共同生活戶_女   
-## 1                    0                114                  739   
-## 2                    0                110                  712   
-## 3                    0                 52                  365   
-## 4                    0                 66                  527   
-## 
-##   household_business_f household_single_f  
-## 0              共同事業戶_女            單獨生活戶_女  
-## 1                    0                138  
-## 2                    0                126  
-## 3                    0                 56  
-## 4                    0                 76</code></pre>
-</div>
-</div>
-<div id="csv-2" class="section level2 tabset tabset-fade">
-<h2>政府開放資料csv-2</h2>
-<div id="q-9" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>上面的練習面臨了什麼狀況呢？(注意摘要統計值)</li>
-<li>請找出方法成功的計算，數值欄位的摘要統計值</li>
-<li>語法上的不熟悉很正常，給自己3分鐘的時間Google</li>
-</ul>
-</div>
-<div id="a-9" class="section level3">
-<h3>A</h3>
-<pre class="python"><code>import pandas as pd
-opdat = pd.read_csv(&quot;_data/opendata105Y010.csv&quot;)
-opdat.columns = opdat[:1].values.tolist()
-opdat = opdat[1:]
-print(opdat.ix[:,4:].astype(int).describe())
-</code></pre>
-<pre><code>##           共同事業戶_戶數     單獨生活戶_戶數       共同生活戶_男      共同事業戶_男     單獨生活戶_男  \
-## count  7851.000000  7851.000000   7851.000000  7851.000000  7851.00000   
-## mean      0.070055   349.940899   1313.566425     1.251688   177.89237   
-## std       0.507456   330.911933   1084.809457    20.794324   158.28117   
-## min       0.000000     3.000000     17.000000     0.000000     1.00000   
-## 25%       0.000000   131.000000    527.000000     0.000000    76.00000   
-## 50%       0.000000   241.000000    990.000000     0.000000   131.00000   
-## 75%       0.000000   468.000000   1843.500000     0.000000   231.00000   
-## max      22.000000  4838.000000  18282.000000  1371.000000  2171.00000   
-## 
-##             共同生活戶_女      共同事業戶_女      單獨生活戶_女  
-## count   7851.000000  7851.000000  7851.000000  
-## mean    1332.828047     0.733665   172.048529  
-## std     1158.825565    16.811378   178.047491  
-## min       18.000000     0.000000     0.000000  
-## 25%      499.000000     0.000000    53.000000  
-## 50%      968.000000     0.000000   109.000000  
-## 75%     1881.500000     0.000000   234.000000  
-## max    20081.000000  1355.000000  2667.000000</code></pre>
-</div>
-</div>
-<div class="section level2 tabset tabset-fade">
-<h2>成對散點圖</h2>
-<div id="q-10" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>任意挑選opendata103Y010資料的兩個數值欄位繪製成對散點圖</li>
-</ul>
-</div>
-<div id="a-10" class="section level3">
-<h3>A</h3>
-<pre><code>import seaborn as sns
-import pandas as pd
-import matplotlib.pyplot as plt
-opdat = pd.read_csv(&quot;_data/opendata103Y010.csv&quot;)
-opdat.columns = opdat[:1].values.tolist()
-opdat = opdat[1:]
-sns.pairplot(opdat[['共同生活戶_男','共同生活戶_女']].astype(int))
-plt.show()
-# 中文問題：https://segmentfault.com/a/1190000005144275</code></pre>
-</div>
-</div>
-<div class="section level2 tabset tabset-fade">
-<h2>集群分析</h2>
-<div id="q-11" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>將opendata103Y010資料以k-means的<strong>列</strong>集為5群</li>
-<li>依照上述步驟將其視覺化</li>
-<li>提示：透過<code>apply(pd.to_numeric)</code>一次將多欄位轉換為數值資料</li>
-<li>將labels對應地名(區域別+村里名稱)</li>
-</ul>
-</div>
-<div id="a-11" class="section level3">
-<h3>A</h3>
-<pre><code>import seaborn as sns
-import pandas as pd
-import matplotlib.pyplot as plt
-opdat = pd.read_csv(&quot;_data/opendata103Y010.csv&quot;)
-opdat.columns = opdat[:1].values.tolist()
-opdat = opdat[1:]
-
-from sklearn.cluster import KMeans
-kmeans_model = KMeans(n_clusters=5, random_state=1)
-good_columns = opdat.ix[:,list(range(12))[3:]].apply(pd.to_numeric)
-good_columns = good_columns._get_numeric_data().dropna(axis=1) # 移除非數值及含有NA值的欄位
-kmeans_model.fit(good_columns)
-labels = kmeans_model.labels_
-
-from sklearn.decomposition import PCA
-pca_2 = PCA(2)
-plot_columns = pca_2.fit_transform(good_columns)
-plt.scatter(x=plot_columns[:,0], y=plot_columns[:,1], c=labels)
-plt.show()
-
-pd.DataFrame({'location':opdat['區域別']+opdat['村里名稱'], 'labels':labels}).sort_values(by='labels').head()</code></pre>
-</div>
-</div>
-<div id="-alligator" class="section level2 tabset tabset-fade">
-<h2>線性迴歸-alligator資料集</h2>
-<div id="q-12" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>將「alligator.csv」資料讀入並進行線性迴歸分析</li>
-<li>美國短吻鳄</li>
-<li>載入資料</li>
-<li>取得資料的維度狀況</li>
-<li>試以長度為自變數(x)，重量為應變數(y)，配適迴歸模型</li>
-<li>繪製散點圖並將迴歸直線一同畫上</li>
-</ul>
-</div>
-<div id="a-12" class="section level3">
-<h3>A</h3>
-<pre><code>import pandas as pd
-import matplotlib.pyplot as plt
-from scipy.optimize import curve_fit
-df = pd.read_csv(&quot;_data/alligator.csv&quot;)
-
-def f(x, a, b):
-    return a*x + b
-
-x = df.iloc[:,0]
-y = df.iloc[:,1]
-popt, pcov = curve_fit(f, x, y)
-a, b = popt
-
-plt.scatter(x,y)
-plt.plot(x, a*x + b, 'r',label=&quot;fit&quot;)
-ax = plt.gca()
-ax.legend();
-plt.show()</code></pre>
-</div>
-</div>
-<div id="-" class="section level2 tabset tabset-fade">
-<h2>線性迴歸-廣告資料集</h2>
-<div id="q-13" class="section level3">
-<h3>Q</h3>
-<ul>
-<li>以Radio為自變數進行單變量線性迴歸</li>
-<li>假設一個新的Radio投入成本為30，請預測其銷售量</li>
-<li>繪製散點圖與迴歸直線</li>
-</ul>
-</div>
-<div id="a-13" class="section level3">
-<h3>A</h3>
-<pre><code></code></pre>
+<!-- ## Google評論GET {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - GET 「Google Play商店的APP評論」 -->
+<!-- - 請依下列步驟練習： -->
+<!--     - 打開Chrome瀏覽器，於網址列中輸入Google Play並進入其網站 -->
+<!--     - 於Google Play中搜尋「Whos call」並進入其App內頁 -->
+<!--     - 依照上述步驟將網頁GET下來 -->
+<!-- ### A -->
+<!-- ```{python} -->
+<!-- import requests -->
+<!-- res_gooplay_get = requests.get('https://play.google.com/store/apps/details?id=gogolook.callgogolook2&hl=zh_TW') -->
+<!-- print(type(res_gooplay_get)) -->
+<!-- print(dir(res_gooplay_get)) -->
+<!-- print(res_gooplay_get.text[:100]) -->
+<!-- ``` -->
+<!-- ## POST簡易網站 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 請依下列步驟練習： -->
+<!--     - https://www.cs.tut.fi/~jkorpela/forms/testing.html -->
+<!--     - 請見網頁中最下方的範例 -->
+<!--     - 依照上述步驟找出規則 -->
+<!--     - 用POST方法，傳送表單('Comments' : 'I love Python', 'hidden field':'R is nice also') -->
+<!--     - print出server端回傳的response，並且透過HTML函數將其內容重現 -->
+<!-- ### A -->
+<!-- ```{python} -->
+<!-- import requests -->
+<!-- payload = { -->
+<!--     'Comments':'I love Python', -->
+<!--     'hidden field':'R is nice also' -->
+<!-- } -->
+<!-- res_simple_post2 = requests.post('http://www.tipjar.com/cgi-bin/test', data = payload) -->
+<!-- print(res_simple_post2.text) -->
+<!-- ``` -->
+<!-- ## GET Google Play Comment {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 請依下列步驟練習： -->
+<!--     - 透過GET取得Google play任一APP的網頁原始碼 -->
+<!--     - 轉換為`BeautifulSoup`物件 -->
+<!--     - 依照上述步驟找出規則並取得user評論的list -->
+<!--     - 將list依序print出來 -->
+<!-- ### A -->
+<!-- ```{python} -->
+<!-- import requests -->
+<!-- from bs4 import BeautifulSoup -->
+<!-- res_gooplay_get = requests.get('https://play.google.com/store/apps/details?id=gogolook.callgogolook2&hl=zh_TW') -->
+<!-- soup = BeautifulSoup(res_gooplay_get.text, 'lxml') -->
+<!-- comments = soup.select('div[class="review-body with-review-wrapper"]') -->
+<!-- for comment in comments[:3]: #只顯示前3筆 -->
+<!--     print(comment.get_text()) -->
+<!-- ``` -->
+<!-- ## mac-benchmarks table with Pandas {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 將「mac-benchmarks」網頁原始碼parse出表格資料 -->
+<!-- - 請依下列步驟練習： -->
+<!--     - 以GET方法將網頁 https://browser.primatelabs.com/mac-benchmarks 原始碼讀入 -->
+<!--     - 依照上述步驟parse出表格資料 -->
+<!--     - 試著只取得其機型與分數欄位 -->
+<!--     - 以plot函數，繪製長條圖 -->
+<!-- ### A -->
+<!-- ```{python} -->
+<!-- import requests -->
+<!-- import pandas as pd -->
+<!-- res = requests.get("https://browser.primatelabs.com/mac-benchmarks") -->
+<!-- import sys -->
+<!-- dfs = pd.read_html(res.text) -->
+<!-- df = dfs[1][["Mac", "Score"]] -->
+<!-- print(df.head()) -->
+<!-- df.plot(kind='bar'); -->
+<!-- df.ix[:10].plot(kind='bar'); -->
+<!-- ``` -->
+<!-- ## parse 批批踢JOKE版的推文 with bs4 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 擷取並parse「批批踢JOKE版的一篇文章」 -->
+<!-- - 請依下列步驟練習： -->
+<!--     - 以GET方法將網頁 https://www.ptt.cc/bbs/joke/M.1464278893.A.2FE.html 原始碼讀入 -->
+<!--     - 依照上述步驟parse出推文內容及推文者 -->
+<!--     - 透過for迴圈，整齊印出 -->
+<!-- ### A -->
+<!-- ```{python} -->
+<!-- import requests -->
+<!-- from bs4 import BeautifulSoup -->
+<!-- res_ppt_get = requests.get("https://www.ptt.cc/bbs/joke/M.1464278893.A.2FE.html") -->
+<!-- soup = BeautifulSoup(res_ppt_get.text, 'lxml') -->
+<!-- pushs = soup.select('.push') -->
+<!-- for push in pushs[:10]: #只印前10筆 -->
+<!--     print(push.select('span[class="f3 hl push-userid"]')[0].text, -->
+<!--           push.select('span[class="f3 push-content"]')[0].text) -->
+<!-- ``` -->
+<!-- ## 政府開放資料csv-1 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 政府開放資料： -->
+<!--     - 資料集描述：戶數、人口數按戶別及性別 -->
+<!--     - 主要欄位說明：統計年、區域別、村里、戶別、戶數、男性、女性 -->
+<!-- - 步驟提示： -->
+<!--     - 載入資料 -->
+<!--     - 取得資料的維度狀況 -->
+<!--     - 預覽前5筆資料 -->
+<!--     - 計算各欄位摘要統計值 -->
+<!-- ### A -->
+<!-- ```{python} -->
+<!-- import pandas as pd -->
+<!-- opdat = pd.read_csv("_data/opendata105Y010.csv") -->
+<!-- print("-----資料欄列數-----") -->
+<!-- print(opdat.shape) -->
+<!-- print("-----各欄位資料類別-----") -->
+<!-- print(opdat.dtypes) -->
+<!-- print("-----各欄位摘要-----") -->
+<!-- print(opdat.describe()) -->
+<!-- print("-----前五筆資料-----") -->
+<!-- print(opdat.head(5)) -->
+<!-- ``` -->
+<!-- ## 政府開放資料csv-2 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 上面的練習面臨了什麼狀況呢？(注意摘要統計值) -->
+<!-- - 請找出方法成功的計算，數值欄位的摘要統計值 -->
+<!-- - 語法上的不熟悉很正常，給自己3分鐘的時間Google -->
+<!-- ### A -->
+<!-- ```{python} -->
+<!-- import pandas as pd -->
+<!-- opdat = pd.read_csv("_data/opendata105Y010.csv") -->
+<!-- opdat.columns = opdat[:1].values.tolist() -->
+<!-- opdat = opdat[1:] -->
+<!-- print(opdat.ix[:,4:].astype(int).describe()) -->
+<!-- ``` -->
+<!-- ## 成對散點圖 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 任意挑選opendata103Y010資料的兩個數值欄位繪製成對散點圖 -->
+<!-- ### A -->
+<!-- ```{} -->
+<!-- import seaborn as sns -->
+<!-- import pandas as pd -->
+<!-- import matplotlib.pyplot as plt -->
+<!-- opdat = pd.read_csv("_data/opendata103Y010.csv") -->
+<!-- opdat.columns = opdat[:1].values.tolist() -->
+<!-- opdat = opdat[1:] -->
+<!-- sns.pairplot(opdat[['共同生活戶_男','共同生活戶_女']].astype(int)) -->
+<!-- plt.show() -->
+<!-- # 中文問題：https://segmentfault.com/a/1190000005144275 -->
+<!-- ``` -->
+<!-- ## 集群分析 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 將opendata103Y010資料以k-means的**列**集為5群 -->
+<!-- - 依照上述步驟將其視覺化 -->
+<!-- - 提示：透過`apply(pd.to_numeric)`一次將多欄位轉換為數值資料 -->
+<!-- - 將labels對應地名(區域別+村里名稱) -->
+<!-- ### A -->
+<!-- ```{} -->
+<!-- import seaborn as sns -->
+<!-- import pandas as pd -->
+<!-- import matplotlib.pyplot as plt -->
+<!-- opdat = pd.read_csv("_data/opendata103Y010.csv") -->
+<!-- opdat.columns = opdat[:1].values.tolist() -->
+<!-- opdat = opdat[1:] -->
+<!-- from sklearn.cluster import KMeans -->
+<!-- kmeans_model = KMeans(n_clusters=5, random_state=1) -->
+<!-- good_columns = opdat.ix[:,list(range(12))[3:]].apply(pd.to_numeric) -->
+<!-- good_columns = good_columns._get_numeric_data().dropna(axis=1) # 移除非數值及含有NA值的欄位 -->
+<!-- kmeans_model.fit(good_columns) -->
+<!-- labels = kmeans_model.labels_ -->
+<!-- from sklearn.decomposition import PCA -->
+<!-- pca_2 = PCA(2) -->
+<!-- plot_columns = pca_2.fit_transform(good_columns) -->
+<!-- plt.scatter(x=plot_columns[:,0], y=plot_columns[:,1], c=labels) -->
+<!-- plt.show() -->
+<!-- pd.DataFrame({'location':opdat['區域別']+opdat['村里名稱'], 'labels':labels}).sort_values(by='labels').head() -->
+<!-- ``` -->
+<!-- ## 線性迴歸-alligator資料集 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 將「alligator.csv」資料讀入並進行線性迴歸分析 -->
+<!-- - 美國短吻鳄 -->
+<!-- - 載入資料 -->
+<!-- - 取得資料的維度狀況 -->
+<!-- - 試以長度為自變數(x)，重量為應變數(y)，配適迴歸模型 -->
+<!-- - 繪製散點圖並將迴歸直線一同畫上 -->
+<!-- ### A -->
+<!-- ```{} -->
+<!-- import pandas as pd -->
+<!-- import matplotlib.pyplot as plt -->
+<!-- from scipy.optimize import curve_fit -->
+<!-- df = pd.read_csv("_data/alligator.csv") -->
+<!-- def f(x, a, b): -->
+<!--     return a*x + b -->
+<!-- x = df.iloc[:,0] -->
+<!-- y = df.iloc[:,1] -->
+<!-- popt, pcov = curve_fit(f, x, y) -->
+<!-- a, b = popt -->
+<!-- plt.scatter(x,y) -->
+<!-- plt.plot(x, a*x + b, 'r',label="fit") -->
+<!-- ax = plt.gca() -->
+<!-- ax.legend(); -->
+<!-- plt.show() -->
+<!-- ``` -->
+<!-- ## 線性迴歸-廣告資料集 {.tabset .tabset-fade} -->
+<!-- ### Q -->
+<!-- - 以Radio為自變數進行單變量線性迴歸 -->
+<!-- - 假設一個新的Radio投入成本為30，請預測其銷售量 -->
+<!-- - 繪製散點圖與迴歸直線 -->
+<!-- ### A -->
+<!-- ```{} -->
+<!-- ``` -->
 </div>
 </div>
 </div>
