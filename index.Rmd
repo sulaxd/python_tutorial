@@ -137,6 +137,106 @@ def oddOrEven(num):
 oddOrEven(9)
 ```
 
+## 1102練習 {.tabset .tabset-fade}
+### Q1
+請用巢狀List表達，甲班有20位學生，學號是1-20號，五個為一組。
+```{python, echo=F}
+print([list(range(1,5+1)),list(range(6,10+1)),list(range(11,15+1)),list(range(16,20+1))])
+```
+
+### A1
+```{python}
+class_a = [list(range(1,5+1)),list(range(6,10+1)),list(range(11,15+1)),list(range(16,20+1))]
+print(class_a)
+```
+
+### Q2
+請用巢狀List表達，甲班有100位學生，學號是1-100號，五個為一組。
+
+### A2
+```{python}
+class_a = []
+for i in range(1, 100, 5):
+  class_a.append(list(range(i, i+5)))
+  
+print(class_a)
+```
+
+
+### Q3
+乙班也有100位學生，學號是101-200號，五個為一組，請問如何同時表達兩個班級的學生？
+
+### A3
+```{python}
+class_a = []
+for i in range(1, 100, 5):
+  class_a.append(list(range(i, i+5)))
+  
+class_b = []
+for i in range(101, 200, 5):
+  class_b.append(list(range(i, i+5)))
+  
+dict_class = {"甲班":class_a, "乙班":class_b}
+print(dict_class)
+```
+
+
+### Q4
+請透過Q2的結果查詢乙班第16組的第三位學生是誰
+
+### A4
+```{python}
+class_a = []
+for i in range(1, 100, 5):
+  class_a.append(list(range(i, i+5)))
+  
+class_b = []
+for i in range(101, 200, 5):
+  class_b.append(list(range(i, i+5)))
+  
+dict_class = {"甲班":class_a, "乙班":class_b}
+
+print(dict_class["甲班"][16][3])
+```
+
+### Q5
+還有丙丁戊己也請加入dict_class中
+
+### A5
+```{python}
+
+def create_class(a,b,c):
+  class_x = []
+  for i in range(a, b, c):
+    class_x.append(list(range(i, i+5)))
+  return(class_x)
+
+class_a = create_class(1,100,5)
+class_b = create_class(101,200,5)
+class_c = create_class(201,300,5)
+class_d = create_class(301,400,5)
+class_e = create_class(401,500,5)
+class_f = create_class(501,600,5)
+
+
+  
+dict_class = {"甲班":class_a, "乙班":class_b, "丙班":class_c, "丁班":class_b, "戊班":class_b, "己班":class_b}
+
+print(dict_class)
+```
+
+### Q6
+甲班舉辦抽獎，幫他們隨機抽出一位得獎者
+
+### A6
+```{python}
+import random
+print(random.choice(range(1,50+1)))
+```
+
+
+
+
 <!-- ## Google評論GET {.tabset .tabset-fade} -->
 <!-- ### Q -->
 <!-- - GET 「Google Play商店的APP評論」 -->
