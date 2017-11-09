@@ -182,7 +182,7 @@ print(dict_class)
 
 
 ### Q4
-請透過Q2的結果查詢乙班第16組的第三位學生是誰
+請透過上題的結果查詢乙班第16組的第三位學生是誰
 
 ### A4
 ```{python}
@@ -196,7 +196,7 @@ for i in range(101, 200, 5):
   
 dict_class = {"甲班":class_a, "乙班":class_b}
 
-print(dict_class["甲班"][16][3])
+print(dict_class["甲班"][15][2])
 ```
 
 ### Q5
@@ -220,7 +220,7 @@ class_f = create_class(501,600,5)
 
 
   
-dict_class = {"甲班":class_a, "乙班":class_b, "丙班":class_c, "丁班":class_b, "戊班":class_b, "己班":class_b}
+dict_class = {"甲班":class_a, "乙班":class_b, "丙班":class_c, "丁班":class_d, "戊班":class_e, "己班":class_f}
 
 print(dict_class)
 ```
